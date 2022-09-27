@@ -42,11 +42,7 @@ $(document).ready(function(){
         backSpeed: 60,
         loop: true
     });
-    
-    $('.case').each(function() {
-        var link = $(this).html();
-        $(this).contents().wrap('<a href="https://play.google.com/store/apps/details?id=com.NepDragon.SpaceImapct"></a>');
-      });
+
 
 
     // owl carousel script
