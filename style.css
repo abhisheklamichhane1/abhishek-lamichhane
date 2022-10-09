@@ -305,8 +305,11 @@ section .title::after{
     margin-bottom: 10px;
     
 }
-.texti{
-    font-size: 24px;
+.skills .skills-content .left .texti{
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    
 }
 
 .moreText{
