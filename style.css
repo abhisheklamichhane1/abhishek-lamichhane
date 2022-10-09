@@ -309,6 +309,10 @@ section .title::after{
 .moreText{
     display: none;
 }
+.text.show-more .moreText{
+    display: inline;
+}
+
 .skills .skills-content .left p{
     text-align: justify;
 }
