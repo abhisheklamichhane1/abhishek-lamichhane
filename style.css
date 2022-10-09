@@ -305,6 +305,9 @@ section .title::after{
     margin-bottom: 10px;
     
 }
+.texti{
+    font-size: 24px;
+}
 
 .moreText{
     display: none;
