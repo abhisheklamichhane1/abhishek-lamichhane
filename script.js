@@ -73,4 +73,10 @@ $(document).ready(function(){
 
 $(document).ready(function(){
     $(".invisible-content").hide();
+    $(document).on('click', "#btn", function(){
+        var moreLessButton=$(".invisible-content").is(".visible")?'Read more':'Read less';
+        $(this).text(moreLessButton);
+        $(this).parent(".skills").find(".invisible-content").toggle();
+        $(this).parent(".skills").find(".text").toggle();
+    });
 });
