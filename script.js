@@ -45,7 +45,7 @@ $(document).ready(function(){
 
     //Read more button
     const readMoreBtn = document.querySelector('.read-more-btn');
-    const text = document.querySelector('.text');
+    const text = document.querySelector('.texti');
 
     readMoreBtn.addEventListener('click', (e)=>{
         text.classList.toggle('show-more');
