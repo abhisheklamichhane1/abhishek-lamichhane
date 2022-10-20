@@ -233,7 +233,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="https://formsubmit.co/lamichaneabhishek@gmail.com" method="POST">
+                    <form action="#">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" placeholder="Name" required>
@@ -262,5 +262,31 @@
     </footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="script.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+
+        function sendMsg(){
+            e.preventDefault();
+        const form = document.querySelector('.fields');
+        name = document.querySelector('.field name');
+        email = document.querySelector('.field email');
+        subject = document.querySelector('.field');
+        message = document.querySelector('.field textarea');
+
+
+        Email.send({
+            SecureToken : "0e937cd5-9345-4805-b13a-5561201460c2",
+            To : 'lamichaneabhishek@gmail.com',
+            From : email.value,
+            Subject : subject.value,
+            Body : message.value
+        }).then(
+        message => alert(message)
+        );
+    }
+
+    form.addEventListener('submit', sendMsg);
+
+    </script>
 </body>
 </html>
