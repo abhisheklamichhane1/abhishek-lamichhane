@@ -233,7 +233,7 @@
                 </div>
                 <div class="column right">
                     <div class="text">Message me</div>
-                    <form action="#">
+                    <form action="#" onsubmit="sendemail()">
                         <div class="fields">
                             <div class="field name">
                                 <input type="text" placeholder="Name" required>
@@ -265,27 +265,22 @@
     <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script>
 
-        function sendMsg(){
-            e.preventDefault();
-        const form = document.querySelector('.fields');
-        name = document.querySelector('.field name');
-        email = document.querySelector('.field email');
-        subject = document.querySelector('.field');
-        message = document.querySelector('.field textarea');
-
-
+        function sendemail(){
         Email.send({
-            SecureToken : "0e937cd5-9345-4805-b13a-5561201460c2",
-            To : 'lamichaneabhishek@gmail.com',
-            From : email.value,
-            Subject : subject.value,
-            Body : message.value
+            Host : "smtp.elasticemail.com",
+            Username : "lamichaneabhishek@gmail.com",
+            Password : "EB14375080882FB8F8091C92702F3AC9D146",
+            To : 'vishwan.20@jietjodhpur.ac.in',
+            From : "lamichaneabhishek@gmail.com",
+            // document.getElementbyid("idname").value
+            Subject : "subject",
+            Body: "Hello I am user",
+            //document.getElementbyid("idname").value
+            //Body : "Name :" + document.getElementById("name").value,
         }).then(
         message => alert(message)
         );
     }
-
-    form.addEventListener('submit', sendMsg);
 
     </script>
 </body>
