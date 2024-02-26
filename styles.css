@@ -146,3 +146,35 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+
+
+/* Your existing styles */
+
+#memory-game {
+    text-align: center;
+}
+
+.memory-board {
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    gap: 10px;
+    margin-top: 20px;
+}
+
+.memory-card {
+    width: 100px;
+    height: 100px;
+    background-color: #ddd;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.memory-card.active {
+    background-color: #fff;
+}
+
+/* Add any additional styles as needed */
