@@ -18,7 +18,7 @@
 <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
 <script>
   (function(){
-    emailjs.init(m_3YRTAtXsibgsNbw);
+    emailjs.init("m_3YRTAtXsibgsNbw");
   })();
 </script>
 
@@ -373,11 +373,6 @@
 <!-- scroll reveal anim -->
 <script src="https://unpkg.com/scrollreveal"></script>
 
-<script
-      type="text/javascript"
-      src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"
-    ></script>
-
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./assets/js/script.js"></script>
@@ -387,8 +382,8 @@
     e.preventDefault();
 
     emailjs.sendForm(
-      service_rriftxe,
-      template_xsfzlau,
+      "service_rriftxe",
+      "template_xsfzlau",
       this
     ).then(
       function() {
