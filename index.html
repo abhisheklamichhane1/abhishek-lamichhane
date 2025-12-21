@@ -14,6 +14,14 @@
     <link id='favicon' rel="shortcut icon" href="./assets/images/hero3.jpeg" type="image/x-png">
     <title>Portfolio | Abhishek Lamichhane</title>
 </head>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function(){
+    emailjs.init(m_3YRTAtXsibgsNbw);
+  })();
+</script>
+
 <body oncontextmenu="return false">
 
 <!-- pre loader -->
@@ -373,6 +381,28 @@
 <!-- ==== ALL MAJOR JAVASCRIPT CDNS ENDS ==== -->
 
 <script src="./assets/js/script.js"></script>
+
+<script>
+  document.getElementById("contact-form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      service_rriftxe,
+      template_xsfzlau,
+      this
+    ).then(
+      function() {
+        alert("Message sent successfully!");
+        document.getElementById("contact-form").reset();
+      },
+      function(error) {
+        alert("Failed to send message. Please try again.");
+        console.log(error);
+      }
+    );
+  });
+</script>
+
 
 </body>
 </html>
